@@ -1,0 +1,57 @@
+<p class="editprofilehead">Edit Profile Information</p>
+<p class="signoutlinke"><%= link_to 'Signout', signout_path, method: "delete" %></p>
+
+<%= hidden_field_tag "employee[current_skill][]", "" %>
+<%= hidden_field_tag "employee[skills_interested_in][]", "" %>
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="editfname"
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :employee_name %>
+  </div>
+ <div class="lnfield">
+  <div class="field">
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+  </div>
+  <div class="newfirst">
+  <div class="field">
+    <%= f.label :employee_email %>
+    <%= f.text_field :employee_email %>
+  </div>
+  </div>
+  <div class="grfield">
+ <%= gravatar_for @employee %>
+    <a href="http://gravatar.com/emails">Upload 
+      Photo</a>
+</div>    
+
+
+
+ 
+  <div class="submitfld">
+  <div class="actions">
+    <%= f.submit "Update Profile", class: "btn btn-large btn-primary" %> 
+  </div>
+</div>
+<div class="cancelfld">
+<%= link_to "Cancel", employee_path(current_employee) %>  
+</div>
+<%= render 'form' %>
+<% end %>
+
+

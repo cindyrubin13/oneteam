@@ -1,0 +1,124 @@
+  
+
+  <%= render 'layouts/header' %>
+ 
+ 
+
+  <div id="tabbed_box_1" class="tabbed_box">
+   
+    <div id="navigation">
+          <ul>
+           <li><%= link_to 'All Requests', project_requests_path %></li>
+           <li><%= link_to 'My Profile', employee_path(current_employee) %></li>
+           <li><%= link_to "Requests I've Posted", _my_requests_path %></li>
+           <li><%= link_to "Post a New Request", new_project_request_path, :class => 'current' %></li>
+           <li><%= link_to "Dashboard", dashboard_path %></li>
+          </ul>
+    </div>  
+         <p class="navpost"></p>  
+  </div>
+
+<%= hidden_field_tag "project_request[relevant_skill][]", "" %>
+
+
+
+<p class="profilehead">New Request</p>
+
+<%= form_for(@project_request) do |f| %>
+  <% if @project_request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project_request.errors.count, "error") %> prohibited this project_request from being saved:</h2>
+
+      <ul>
+      <% @project_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="newrequest">
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :employee_id, :value => current_employee.id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :project_help %><br/>
+    <%= f.text_area :project_help, :size => "40x6" %>
+  </div>
+   <div class="field">
+    <%= f.label :group %>
+     <%= f.select :group, ['Development', 'Interface Design', 'QA', 'Infrasructure'] %>
+  </div> 
+
+ <div class="field">
+    <%= f.label :start_date %>
+  
+    <%= f.text_field :start_date %>
+
+  </div>
+
+<div class="field">
+
+    <%= f.label :end_date %>
+
+    <%= f.text_field :end_date %>
+
+  </div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#project_request_end_date').datepicker();
+  });
+</script>
+
+ <script type="text/javascript">
+  $(document).ready(function() {
+    $('#project_request_start_date').datepicker();
+  });
+</script>
+ 
+<div class="proffice">
+<div class="field">
+    <%= f.label :office %>
+    <div class="offselect">
+    <%= f.select :office, ['New York', 'Chicago', 'Los Angeles', 'Atlanta', 'Detroit', 'Boston', 'Mumbai', 'Houston'] %> 
+  </div>
+</div>
+ </div> 
+ <div class="statusfield"> 
+  <div class="field">
+    <%= f.label :status_request %>
+     <%= f.select :rstatus, ['Active', 'Cancel'] %>
+  </div> 
+</div>
+  <div class="relsk">
+   <div class="field">
+     <%= f.label :relevant_skills  %>
+     <% @skills.each do |skill| %>
+      <div class="inbox">
+       <%= check_box_tag "relevant_skill[]", skill.language %>
+       <%= skill.language %>
+     </div>
+       <% end %>
+
+  <!--<div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>-->
+<%= f.hidden_field :request_status, :value => 0 %><br />
+
+   <div class="fourtfld">
+   <div class="actions">
+    <%= f.submit "Create My Request", class: "btn btn-large btn-primary" %>
+  </div>
+</div>
+</div>
+</div>
+ </div>
+<% end %>
+
+

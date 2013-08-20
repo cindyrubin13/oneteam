@@ -1,0 +1,34 @@
+<h1>Listing of Responses for a Project Request</h1>
+<%= stylesheet_link_tag 'stylesheets/request_selections' %>
+<table>
+  <tr>
+    <th>Message</th>
+    <th>Employee</th>
+    <th>Project request</th>
+    <th> Employee First Name</th>
+    <th> Employee Last Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+ 
+
+ 
+  <% @responses.each do |response| %>
+    
+      <tr>
+        <td><%= response.message %></td>
+        <td><%= response.employee_id %></td>
+        <td><%= response.project_request_id %></td>
+        <td><%= response.employee.employee_name.capitalize %></td>
+        <td><%= response.employee.last_name.capitalize %></td>
+        <td><%= link_to 'View Profile', employee_path(response.employee_id) %></td>
+        
+      </tr>
+        
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back to list of project requests', project_requests_path %>

@@ -1,0 +1,57 @@
+<h1 class="signhead">New Employee Sign-Up Page</h1>
+
+
+<%= form_for(@employee) do |f| %>
+ 
+   
+   <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :employee_name %>
+    </div>
+    <div class="lnfield">
+    <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+    </div>
+    </div>
+    <div class="newfirst">
+      <div class="field">
+      <%= f.label :employee_email %>
+      <%= f.text_field :employee_email %>
+     </div>
+     </div>
+     <div class="passfld">
+    <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    </div>
+  </div>
+    <div class="newsecond">
+     <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+    </div>
+    </div>
+ 
+ 
+  <div class="newsub">
+ <div class="actions">
+    <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+  </div>
+</div>
+ <%= render 'form' %>
+<% end %>
+
+
+  
+    
+
+     
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+
+
+
+<%= form_for([@request_selection,  @reward]) do |f| %>
+  <% if @reward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reward.errors.count, "error") %> prohibited this reward from being saved:</h2>
+
+      <ul>
+      <% @reward.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <%= f.label :reward_date %><br />
+  <%= f.date_select(:reward_date, :order => [:month, :day, :year], :default => @current_date) %>
+    
+   
+  <p> Employee Name:  
+  <%= @reward.request_selection.employee.employee_name %>    <%= @reward.request_selection.employee.last_name %></p>
+  <p> Project Request Title: <%= @reward.request_selection.project_request.title %> </p>
+
+   
+  <p> Total Number of Days  <%= @reward.request_selection.employee.employee_name %>   
+      <%= @reward.request_selection.employee.last_name %> Worked on This Project </P>
+      <%= @reward.request_selection.project_request.duration_in_days  %>
+   
+ 
+   
+   <table>
+    <tr>
+    
+    <th>Language</th>
+    <th>Current Level</th>
+    
+    </tr>
+
+
+<% @developer_skills.each do |developer_skill| %>
+  <% if developer_skill.employee_id == @reward.request_selection.employee_id %>
+  <tr>
+    <% @skills.each do |skill| %>
+      <% if developer_skill.skill_id == skill.id %>
+        <td> <%= skill.language %></td>
+      <% end %>
+    <% end %>
+    <td><%= developer_skill.level %></td>
+
+    <%= f.fields_for :evaluations do |builder| %>
+      <td><%= builder.label :eval_number, "Experience Points" %>
+          <%= builder.select(:eval_number, (0..@reward.request_selection.project_request.duration_in_days)) %> </td>
+      <td><%= builder.label :level, "Level" %>
+          <%= builder.number_field :level, :value =>  developer_skill.level %></td>
+          <%= builder.hidden_field :skill_id, :value =>  developer_skill.skill_id %>
+    <% end %>
+  <% end %>
+    
+  </tr>
+<% end %>
+
+  </table>
+    <%= f.submit %>
+     
+   
+   </div>          
+<% end %>
+   
+       
+
+
+
+
+        
+        
+             
+
+
+
+     
+            
+
+

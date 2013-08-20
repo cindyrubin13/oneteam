@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project help:</b>
+  <%= @project_request.project_help %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @project_request.employee.employee_name %>
+  <%= @project_request.employee.last_name %>
+</p>
+
+<p>
+  <b>Start Date:</b>
+  <%= @project_request.start_date.strftime("%B %e, %Y") %>
+    
+</p>
+
+<p>
+  <b>End Date:</b>
+ <%= @project_request.end_date.strftime(" %B %e, %Y") %>
+</p>
+
+<p>
+  <b>Relevant Skills:</b>
+  <%= @project_request.relevant_skill %>
+</p>
+
+
+<%= link_to "Requests I've Posted", _my_requests_path  %>
