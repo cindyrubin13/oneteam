@@ -556,7 +556,7 @@ height: 100%
 
 .fourtfld {
   position: absolute;
-  top: 480px;
+  top: 500px;
   left: 250px;
 
 }
@@ -1166,7 +1166,7 @@ ul.tabs li a  {
    
  
 
-#dashboard_index_navigation  {
+/*#dashboard_index_navigation  {
  position: absolute;
   top:200px;
   left: 40px;
@@ -1181,7 +1181,7 @@ ul.tabs li a  {
   text-decoration: none;
   width: 93%;
 
-}
+}*/
 /*#dashboard_index_navigation  li {
   color: white;
 
