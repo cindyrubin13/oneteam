@@ -8,7 +8,8 @@
 
   border: 3px solid #006400;
   background-color: #32CD32;
-  width: 100;
+  /* changed 100 to 85% */
+  width: 85%;
   color: black;
   padding: 50px;
   margin: 40px;
@@ -22,11 +23,15 @@
 .headsignoutlink {
   position: absolute;
   top: 65px;
-  right: 60px;
+  /* moving signout link inside header right 560*/
+  left: 68%;
   font-size: 20px;
   font-weight: bold;
+  max-width: 7%;
 }
-
+.setfont {
+  font-size: 20px;
+}
 .welcome {
   position: absolute;
   top: 55px;
@@ -46,7 +51,7 @@
 }
 
 .projects {
-  border: 1px solid 006400;
+  border: 1px solid #006400;
   background-color: #99FF66;
   color: black;
   border-radius: 4px;
@@ -130,7 +135,7 @@ footer {
   top: 175px;
   text-align: center;
   font-weight: bold;
-  left: 360px;
+  left: 260px;
   
 }
  .signin {
@@ -178,7 +183,7 @@ footer {
   top: 250px;
   left: 240px;
   color: #458B00;
-
+  
 }
 
 
@@ -298,8 +303,11 @@ height: 100%
   position: absolute;
   top: 220px;
   left:100px;
-}
 
+}
+.allfont{
+  font-size: 20px;
+}
 .signoutlink {
   position: absolute;
   top: 100px;
@@ -384,7 +392,7 @@ height: 100%
 .proffice {
   position: absolute;
 
-  top: 153px;
+  top: 173px;
   left: 330px;
 }
 .offselect {
@@ -393,9 +401,21 @@ height: 100%
   left: 50px;
   
 }
+.newgroup {
+  position: absolute;
+  top: 180px;
+}
+.stdate {
+  position: absolute;
+  top: 210px;
+}
+.enddate {
+  position: absolute;
+  top: 250px
+}
 .relsk {
   position: absolute;
-  top: 250px;
+  top: 340px;
 }
 .grfield {
   position: absolute;
@@ -414,10 +434,10 @@ height: 100%
   top: 95px;
 }
 .statusfield {
-
- position: relative;
- top: -30px;
- left: 330px;
+ position: absolute;
+ top: 300px;
+ left: -2px;
+ 
 }
 
 
@@ -536,7 +556,7 @@ height: 100%
 
 .fourtfld {
   position: absolute;
-  top: 180px;
+  top: 480px;
   left: 250px;
 
 }
@@ -735,13 +755,14 @@ ul.tabs li a  {
    }
  #navigation .current {
   text-decoration: none;
-     list-style: none;
+  list-style: none;
   display: inline;
   text-align: center;
   text-decoration: none;
   background-color: white;
   color: #458B00;
-  border-bottom: 3px solid white;
+  border-bottom: none;
+  /*border-bottom: 3px solid white;*/
   
 }
 #navigation {
@@ -769,7 +790,7 @@ ul.tabs li a  {
 
 }
 
-.navline {
+/*.navline {
   position: absolute;
   top: 168px;
   font: bold;
@@ -780,7 +801,7 @@ ul.tabs li a  {
    border-right: 3px solid #458B00;
    padding-right: 0;
 
-  width: 35.5%;
+  width: 38.8%;
   left: 168px;
 }
 
@@ -791,7 +812,7 @@ ul.tabs li a  {
   color: #458B00;
   border-bottom: 3px solid #458B00;
   left: 50px;
-  width: 130px;
+  width: 127px;
 
 }
 .navlinepro {
@@ -805,7 +826,7 @@ ul.tabs li a  {
    border-right: 3px solid #458B00;
    padding-right: 0;
 
-  width: 27.8%;
+  width: 31.5%;
   left: 274px;
 }
 .navmyrequest {
@@ -829,10 +850,10 @@ ul.tabs li a  {
    border-right: 3px solid #458B00;
    padding-right: 0;
 
-  width: 13.6%;
+  width: 18.5%;
   left: 467px;
-}
-.navpost {
+}*/
+/*.navpost {
   position: absolute;
   top: 168px;
   font: bold;
@@ -841,11 +862,12 @@ ul.tabs li a  {
   border-bottom: 3px solid #458B00;
 
    border-right: 3px solid #458B00;
-   padding-right: 0;
+   padding-right: 0;*/
 
-  width: 31.5%;
+  /*width: 31.5%;*/
+  /*width: 27%;
   left: 50px;
-}
+}*/
 
 .dash_header {
   position: absolute;
@@ -855,6 +877,18 @@ ul.tabs li a  {
   font-size: large;
   color: #458B00;
   left: 28%;
+   text-transform: uppercase;
+  
+}
+.dash_header_avg {
+  position: absolute;
+  top: 200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  color: #458B00;
+  /* changed from 28 to 23 */
+  left: 27%;
    text-transform: uppercase;
   
 }
@@ -888,7 +922,8 @@ ul.tabs li a  {
   font-weight: bold;
   font-size: large;
   color: #458B00;
-  left: 29%;
+  /* changed from 29 to 23 */
+  left: 23%;
    text-transform: uppercase;
   
 }
@@ -899,7 +934,8 @@ ul.tabs li a  {
   font-weight: bold;
   font-size: large;
   color: #458B00;
-  left: 28%;
+  /* changed from 27 to 29 */
+  left: 29%;
    text-transform: uppercase;
   
 }
@@ -910,7 +946,8 @@ ul.tabs li a  {
   font-weight: bold;
   font-size: large;
   color: #458B00;
-  left: 27%;
+  /* changed from 27 to 26 */
+  left: 26%;
    text-transform: uppercase;
 }
 .dash_header_shared2 {
@@ -920,8 +957,9 @@ ul.tabs li a  {
   font-weight: bold;
   font-size: large;
   color: #458B00;
-  left: 27%;
-   text-transform: uppercase;
+  /*changed from 27 to 26 */
+  left: 26%;
+  text-transform: uppercase;
   
 }
 .dash_title th{
@@ -956,8 +994,9 @@ ul.tabs li a  {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 5px;
-   padding-right: 5px;
-  left: 27%;
+  padding-right: 5px;
+   /* changed from 27 to 19 */
+  left: 26%;
   
 }
 #averagechart {
@@ -974,6 +1013,7 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
+   /* changed from 27 to 27 */
   left: 27%;
   
 }
@@ -988,7 +1028,8 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
-  left: 27%;
+   /* changed from 27 to 26 */
+  left: 26%;
   
 }
 
@@ -1003,6 +1044,7 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
+   /* changed from 27 to 27 */
   left: 27%;
   
 }
@@ -1036,7 +1078,8 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
-  left: 28%;
+   /* cjanged from 27 to 19 */
+  left: 26%;
   
 }
 
@@ -1051,7 +1094,8 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
-  left: 27%;
+   /* changed from 27 to 26 */
+  left: 26%;
   
 }
 
@@ -1066,7 +1110,8 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
-  left: 27%;
+   /* changed from 27 to 26 */
+  left: 26%;
   
 }
 .dashreport_volunteer {
@@ -1078,9 +1123,11 @@ ul.tabs li a  {
   border-radius: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 15px;
-   padding-right: 15px;
-   left: 27%;
+  /* changed from 15 to 5 */
+  padding-left: 5px;
+   padding-right: 5px;
+   /* changed from 27 to 19 */
+   left: 26%;
   
   
 }
@@ -1105,6 +1152,8 @@ ul.tabs li a  {
   border-bottom: 1px solid #458B00;
   padding-bottom: 5px;
   margin-bottom: 5px;
+  margin-left: 0px;
+  padding-left: 0px;
   
   text-transform: uppercase;
 
@@ -1193,8 +1242,10 @@ ul.tabs li a  {
   border: 3px solid #458B00;
   padding: 1px;
   margin: 1px;
-  width: 60%;
-  left: 27%;
+  /* changed from 60 to 48%*/
+  width: 48%;
+  /* changed from 27 to 20*/
+  left: 29%;
   border-radius: 10px;
   margin-bottom: 15px; 
   
