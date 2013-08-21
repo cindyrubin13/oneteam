@@ -23,7 +23,7 @@
 
 
 <p class="profilehead"> My Profile </p>
-<!--<p class="signoutlink"><%= link_to 'Signout', signout_path, method: "delete" %></p>-->
+<%#<p class="signoutlink"><%= link_to 'Signout', signout_path, method: "delete" </p>%>
 
 <% if current_employee?(@employee) %>
 <%= link_to ' Edit Profile', edit_employee_path(current_employee), :class => 'showedit' %>

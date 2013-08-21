@@ -1145,7 +1145,7 @@ ul.tabs li a  {
  #dashboard_navigation li {
   display: block;
   color: #458B00;
-  border-collapse: none;
+  /*border-collapse: none;*/
   border-left: 1px solid #458B00;
   border-top: 1px solid #458B00;
   border-right: 1px solid #458B00;
