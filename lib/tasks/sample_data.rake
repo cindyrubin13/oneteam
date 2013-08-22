@@ -4,7 +4,7 @@ namespace :db do
   desc "Fill database with sample data"
   task :sample_data => :environment do
     require 'populator'
-    #require 'faker'
+    require 'faker'
     
         
     [Employee, ProjectRequest, Response, Skill, DeveloperSkill, DesiredSkill, RequestSelection].each(&:delete_all)
