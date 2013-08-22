@@ -727,8 +727,8 @@ ul.tabs li a  {
 
 #navigation li {
    
-    text-decoration: none;
-     list-style: none;
+  text-decoration: none;
+  list-style: none;
   display: inline;
   text-align: center;
   text-decoration: none;
@@ -1146,6 +1146,8 @@ ul.tabs li a  {
   display: block;
   color: #458B00;
   /*border-collapse: none;*/
+  text-align: center;
+  text-decoration: none;
   border-left: 1px solid #458B00;
   border-top: 1px solid #458B00;
   border-right: 1px solid #458B00;
@@ -1206,6 +1208,7 @@ ul.tabs li a  {
   margin-bottom: 10px; 
   background-color:  #006600;
   text-decoration: underline;
+  color: white;
 }
 
 
@@ -1214,24 +1217,25 @@ ul.tabs li a  {
 
 #dashboard_navigation li a {
   text-decoration: none;
- color: white;
+  color: #458B00;
  
-}
-
+ }
 #dashboard_navigation li a:hover {
   text-decoration: none;
-  
+  background-color: #458B00;
   color: white;
+
 }
 #dashboard_index_navigation li a {
   text-decoration: none;
- color: white;
+  color: white;
 }
 
 #dashboard_index_navigation li a:hover {
   text-decoration: none;
   
   color: white;
+  background-color: #458B00;
 }
 
 
