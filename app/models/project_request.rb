@@ -28,12 +28,12 @@ class ProjectRequest < ActiveRecord::Base
 
 
   def start_date_before_end_date
-        self.errors.add(:start_date, "must be before end date") if self.start_date > self.end_date
+        self.errors.add(:start_date, "must be before end date") if self.start_date >= self.end_date
   end
 
   def check_end_date
-    if end_date < Date.today
-       errors.add(:end_date,  "End Date can only be later than today")
+    if end_date < DateTime.now
+      errors.add(:end_date,  "End Date can only be later than today")
     end
   end
 

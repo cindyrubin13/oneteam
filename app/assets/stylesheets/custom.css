@@ -887,7 +887,7 @@ ul.tabs li a  {
   font-weight: bold;
   font-size: large;
   color: #458B00;
-  /* changed from 28 to 23 */
+  /* changed from 28 to 27 */
   left: 27%;
    text-transform: uppercase;
   
@@ -995,7 +995,7 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 5px;
   padding-right: 5px;
-   /* changed from 27 to 19 */
+   /* changed from 27 to 26 */
   left: 26%;
   
 }
@@ -1078,7 +1078,7 @@ ul.tabs li a  {
   padding-bottom: 15px;
   padding-left: 15px;
    padding-right: 15px;
-   /* cjanged from 27 to 19 */
+   /* cjanged from 27 to 26 */
   left: 26%;
   
 }
@@ -1126,7 +1126,7 @@ ul.tabs li a  {
   /* changed from 15 to 5 */
   padding-left: 5px;
    padding-right: 5px;
-   /* changed from 27 to 19 */
+   /* changed from 27 to 26 */
    left: 26%;
   
   
@@ -1145,6 +1145,7 @@ ul.tabs li a  {
  #dashboard_navigation li {
   display: block;
   color: #458B00;
+  font-weight: bold;
   /*border-collapse: none;*/
   text-align: center;
   text-decoration: none;
