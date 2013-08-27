@@ -126,7 +126,7 @@ footer {
   margin-bottom: 0;
   padding-left: 2px;
   padding-right: 2px;
-  line-height: small;
+  line-height: 10%;
 
 }
 
@@ -268,6 +268,15 @@ height: 100%
    top: 180px;
    text-decoration: none;
    font-size: x-large;
+   color: #458B00;
+   font-style: italic;
+   font-weight: bold;
+   left: 100px;
+}
+#location {
+   position: absolute;
+   top: 225px;
+   font-size: small;
    color: #458B00;
    font-style: italic;
    font-weight: bold;
