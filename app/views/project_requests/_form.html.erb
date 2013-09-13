@@ -2,7 +2,6 @@
  <% if @project_request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project_request.errors.count, "error") %> prohibited this project_request from being saved:</h2>
-
       <ul>
       <% @project_request.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,7 +10,6 @@
     </div>
   <% end %>
  <div class="newrequest">
-
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -19,7 +17,6 @@
   <div class="field">
     <%= f.hidden_field :employee_id, :value => current_employee.id %>
   </div>
-
   <div class="field">
     <%= f.label :description %><br/>
     <%= f.text_area :project_help, :size => "40x6" %>
@@ -35,21 +32,13 @@
   </div> 
   </div>
  <div class="field">
-    <%= f.label :start_date %>
-  
+    <%= f.label :start_date %>  
     <%= f.date_select(:start_date, :order => [:month, :day, :year], :default => @current_date) %>
-
-  </div>
-  
+  </div> 
 <div class="field">
     <%= f.label :end_date %>
-  
     <%= f.date_select(:end_date, :order => [:month, :day, :year], :default => @current_date) %>
   </div>
-  
-
- 
- 
 <div class="proffice">
 <div class="field">
     <%= f.label :office %>
@@ -57,11 +46,5 @@
     <%= f.select :office, ['New York', 'Chicago', 'Los Angeles', 'Atlanta', 'Detroit', 'Boston', 'Mumbai', 'Houston'] %> 
   </div>
 </div>
- </div> 
- 
-
-  
-  
-
-  
+ </div>   
 <% end %>

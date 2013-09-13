@@ -1,13 +1,7 @@
-
-
 <% provide(:title, "Sign in") %>
 <h1 class="signinhead"> Please Sign in </h1>
-
-<div class="signin">
-
-  
-    <%= form_for(:session, url: sessions_path) do |f| %>
-       
+<div class="signin"> 
+    <%= form_for(:session, url: sessions_path) do |f| %>     
       <div class="field">
          <%= f.label :employee_email %><br />
          <%= f.text_field :employee_email %>
@@ -16,15 +10,9 @@
           <%= f.label :password %><br />
           <%= f.password_field :password %>
        </div>
-
-       
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %> 
-   
-
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
-  
- 
 </div>
 
 

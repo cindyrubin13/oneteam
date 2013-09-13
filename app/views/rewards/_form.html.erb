@@ -25,7 +25,7 @@
 
    
   <p> Total Number of Days  <%= @reward.request_selection.employee.employee_name %>   
-      <%= @reward.request_selection.employee.last_name %> Worked on This Project </P>
+      <%= @reward.request_selection.employee.last_name %> Worked on This Project </p>
       <%= @reward.request_selection.project_request.duration_in_days  %>
    
  
@@ -35,7 +35,8 @@
     
     <th>Language</th>
     <th>Current Level</th>
-    
+    <th></th>
+    <th></th>
     </tr>
 
 
@@ -56,9 +57,10 @@
           <%= builder.number_field :level, :value =>  developer_skill.level %></td>
           <%= builder.hidden_field :skill_id, :value =>  developer_skill.skill_id %>
     <% end %>
+     </tr>
   <% end %>
     
-  </tr>
+ 
 <% end %>
 
   </table>

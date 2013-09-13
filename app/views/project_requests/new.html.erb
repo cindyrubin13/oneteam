@@ -1,11 +1,5 @@
-  
-
-  <%= render 'layouts/header' %>
- 
- 
-
-  <div id="tabbed_box_1" class="tabbed_box">
-   
+   <%= render 'layouts/header' %>
+  <div id="tabbed_box_1" class="tabbed_box"> 
     <div id="navigation">
           <ul>
            <li><%= link_to 'All Requests', project_requests_path %></li>
@@ -14,21 +8,14 @@
            <li><%= link_to "Post a New Request", new_project_request_path, :class => 'current' %></li>
            <li><%= link_to "Dashboard", dashboard_path %></li>
           </ul>
-    </div>  
-          
+    </div>            
   </div>
-
 <%= hidden_field_tag "project_request[relevant_skill][]", "" %>
-
-
-
 <p class="profilehead">New Request</p>
-
 <%= form_for(@project_request) do |f| %>
   <% if @project_request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project_request.errors.count, "error") %> prohibited this project_request from being saved:</h2>
-
       <ul>
       <% @project_request.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -37,7 +24,6 @@
     </div>
   <% end %>
  <div class="newrequest">
-
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -45,7 +31,6 @@
   <div class="field">
     <%= f.hidden_field :employee_id, :value => current_employee.id %>
   </div>
-
   <div class="field">
     <%= f.label :project_help %><br/>
     <%= f.text_area :project_help, :size => "40x6" %>
@@ -53,24 +38,18 @@
  <%# <div class="newgroup">%>
    <div class="field">
     <%= f.label :group %>
-     <%= f.select :group, ['Development', 'Interface Design', 'QA', 'Infrasructure'] %>
- 
+     <%= f.select :group, ['Development', 'Interface Design', 'QA', 'Infrasructure'] %> 
   </div>
   <div class="stdate">
   <div class="field">
     <%= f.label :start_date %>
-  
     <%= f.text_field :start_date %>
-
   </div>
  </div>
  <div class="enddate">
 <div class="field">
-
     <%= f.label :end_date %>
-
     <%= f.text_field :end_date %>
-
   </div>
   </div>
 <script type="text/javascript">
@@ -121,12 +100,10 @@
   </div>
   </div>%>
 <%= f.hidden_field :request_status, :value => 0 %><br />
-
    <div class="fourtfld">
    <div class="actions">
     <%= f.submit "Create My Request", class: "btn btn-large btn-primary" %>
   </div>
-
 </div>
  </div>
 <% end %>

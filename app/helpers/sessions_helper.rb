@@ -2,6 +2,7 @@ module SessionsHelper
 	def sign_in(employee)
       cookies.permanent[:remember_token] = employee.remember_token
       self.current_employee = employee
+    
     end
     def signed_in?
       !current_employee.nil?

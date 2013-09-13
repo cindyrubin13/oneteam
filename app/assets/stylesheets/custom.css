@@ -217,8 +217,11 @@ height: 100%
   border-bottom: 3px solid #458B00;
   margin: 0px;
   padding: 0px;
-  width: 50%;
+  width: 70%;
   
+}
+.desc-width{
+  width: 500px;
 }
 .select {
   font: bold;
@@ -242,6 +245,7 @@ height: 100%
 .apply1 {
   font: bold;
   font-size: 18px;
+  width: 800px;
 }
 
 .projectsworked {
@@ -315,7 +319,7 @@ height: 100%
 
 }
 .allfont{
-  font-size: 20px;
+  font-size: 16px;
 }
 .signoutlink {
   position: absolute;
@@ -644,10 +648,10 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
+}*/
 /* sidebar */
 
-aside {
+/*aside {
   section {
     padding: 10px 0;
     border-top: 1px solid gray;
@@ -668,7 +672,7 @@ aside {
       margin-top: 0px;
     }
   }
-}
+}*/
 
 .gravatar {
   float: left;
@@ -687,19 +691,19 @@ aside {
   margin-bottom: 0px;
 }
 .tabbed_area {
-  /*border-bottom: 1px solid #494e52;
+  border-bottom: 1px solid #494e52;
   background-color: white;
-  /*padding: 8px;
+  padding: 8px;
 }
-/*ul.tabs {
+ul.tabs {
   margin: 0px; padding: 0px;
   margin-top: 5px;
   margin-bottom: 6px;
   margin-left: 5px;
   margin-right: 5px;
 
-}*/
-/*ul.tabs li {
+}
+ul.tabs li {
   list-style: none;
   display: inline;
   text-align: center;
@@ -717,7 +721,7 @@ ul.tabs li a  {
   padding: 8px ;
    
 
-   /* border: 1px solid #464c54;
+  border: 1px solid #464c54;
   background-color:  #464c54;
   color: #ffebb5;
   padding: 8px 14px 8px 14px;

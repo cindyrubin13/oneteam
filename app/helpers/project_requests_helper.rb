@@ -36,37 +36,37 @@ def interested_skill_score(rel_skill)
 @emp_skills
 end
 
+def local(office_location)
+    latlng2 = []
+    	if office_location == "Chicago"
+   			latlng2 = [41.8781136, -87.62979819999998]
+   		elsif  office_location == "Mumbai"
+     			latlng2 = [19.0759837, 72.87765590000004]
+ 			elsif office_location == "New York"
+      				latlng2 = [40.7143528, -74.0059731]
+    			elsif office_location == "Los Angeles"
+        				latlng2 = [34.0522342, -118.2436849]
+  					elsif office_location == "Atlanta"
+       					 	latlng2 = [33.7489954, -84.3879824]
+    					elsif office_location == "Detroit"
+      							latlng2 = [42.331427,  -83.0457538]
+    						elsif office_location == "Houston"
+        							latlng2 = [29.7601927, -95.36938959999998]
+    							elsif office_location == "Boston"
+        								latlng2 = [42.3584308, -71.0597732]
+    								elsif office_location == "San Francisco"
+     										latlng2 = [37.7749295, -122.41941550000001] 
+     									elsif  office_location == "London"
+     											latlng2 = [ 51.51121389999999, -0.11982439999997041] 
+    	end 
+    									
+     return latlng2
+end
 
-#def location(office_location)
-#	location_array = []
-#	 if office_location = 'Chicago'
-#	 	location_array.push(41.8819° N, 87.6278° W)
-#	 	elsif office_location = 'Mumbai'
-#	 	location_array.push(18.9750° N, 72.8258° E)
-#	 		elsif office_location = 'New York'
-#	 		location_array.push(40.6700° N, 73.9400° W)
-#				elsif office_location = 'Los Angeles'
-#	 			location_array.push(34.0500° N, 118.2500° W)
-#	 				elsif office_location = 'Atlanta'
-#	 				location_array.push(33.7550° N, 84.3900° W)
-#	 					elsif office_location = 'Detroit'
-#	 					location_array.push(42.3314° N, 83.0458° W)
-#	 						elsif office_location = 'Houston'
-#	 						location_array.push(29.7628° N, 95.3831° W)
-#	 							elsif office_location = 'Boston'
-#	 							location_array.push(42.3581° N, 71.0636° W)
-#	 							end
-#	 						end
-#						end
-#					end
-#				end
-#			end
-#		end
-#	end
-#	return location_array
-#end
-	 						
-
+def get_office_location(office_name)
+	office_locations = {"Chicago" => [41.8781136, -87.62979819999998],  "London" => [ 51.51121389999999, -0.11982439999997041], "Mumbai" => [19.0759837, 72.87765590000004], "New York" => [40.7143528, -74.0059731], "Los Angeles" => [34.0522342, -118.2436849], "Atlanta" => [33.7489954, -84.3879824], "Detroit" => [42.331427,  -83.0457538], "Houston" => [29.7601927, -95.36938959999998], "Boston" => [42.3584308, -71.0597732], "San Francisco" => [37.7749295, -122.41941550000001]}
+	office_locations[office_name]
+end
 
 
 end

@@ -9,11 +9,9 @@
     <%= f.label :description %><br />
     <%= f.text_area :project_help, :size => "40x6" %>
   </div>
-  <div class="field">
-    
+  <div class="field">   
     <%= f.hidden_field :employee_id, :value => current_employee.id %>
-  </div>
-   
+  </div>   
   <div class="field">
     <%= f.label :start_date %><br />
     <%= f.date_select(:start_date, :order => [:month, :day, :year], :default => @current_date) %>
@@ -22,12 +20,10 @@
     <%= f.label :end_date %><br />
     <%= f.date_select(:end_date, :order => [:month, :day, :year], :default => @current_date)  %>
   </div>
- 
   <div class="field">
     <%= f.label :status_request %>
      <%= f.select :rstatus, ['Active', 'Cancel'] %>
   </div> 
-
   <div class="field">
      <%= f.label :relevant_skill  %>
      <% @skills.each do |skill| %>
@@ -36,7 +32,6 @@
        <%= skill.language %>
      </div>
    <% end %>
-
  <div class="field">
     <%= f.label :group %><br />
     <%= f.text_field :group %>
@@ -47,8 +42,7 @@
   </div>
   <div class="field">
   <div class="actions">
-    <%= f.submit 'Update This Request' %>
-   
+    <%= f.submit 'Update This Request' %> 
   </div>
 <%= link_to "Cancel this Edit", _my_requests_path %>  
 <% end %>

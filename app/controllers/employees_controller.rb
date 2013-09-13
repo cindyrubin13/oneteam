@@ -33,6 +33,9 @@ class EmployeesController < ApplicationController
     @current_date = DateTime.now
    
     @skills = Skill.all
+    #@lat_lng = cookies[:lat_lng].split("|")
+    
+
     
       
 

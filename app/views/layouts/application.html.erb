@@ -5,9 +5,20 @@
   <script type="text/javascript"> 
   function showPosition(event) {
     var elt=document.getElementById("location")
+    var date = new Date();
+    
+    date.setTime(date.getTime() + (1*24*60*60*1000));
+    var expires = "; expires="+date.toGMTString();
+    
+    var cookie_val = event.coords.latitude + "|" + event.coords.longitude;
     elt.textContent= "My location is: Latitude: " + event.coords.latitude +  "Longitude: " + event.coords.longitude;
+    
+    
+    document.cookie = "lat_lng=" + escape(cookie_val);
+    
   }
   </script>
+  
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "raphael-min" %>
   <%= javascript_include_tag "application"  %>

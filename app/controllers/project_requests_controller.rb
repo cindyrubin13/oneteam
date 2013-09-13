@@ -26,6 +26,9 @@ class ProjectRequestsController < ApplicationController
     @desired_skills = DesiredSkill.find_all_by_employee_id(current_employee.id)
     @skills = Skill.all
 
+    #@lat_lng = cookies[:lat_lng]
+   @lat_lng = cookies[:lat_lng].split("|").map(&:to_f)
+  # @lat_lng = cookies[:lat_lng].split("|")
      @current_date = DateTime.now
     respond_to do |format|
       format.html # index.html.erb
